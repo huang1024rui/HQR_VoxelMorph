@@ -38,6 +38,13 @@ parse.add_argument("--valid_dir", type=str, help="The validation directory files
                    dest="valid_dir", default="../LPBA40/validate")
 parse.add_argument("--n_save_iter", type=int, help="frequency of model saves",
                     dest="n_save_iter", default=15)
+# test时参数
+parser.add_argument("--test_dir", type=str, help="test data directory",
+                    dest="test_dir", default='./LPBA40/test')
+parser.add_argument("--label_dir", type=str, help="label data directory",
+                    dest="label_dir", default='./LPBA40/label')
+parser.add_argument("--checkpoint_path", type=str, help="model weight file",
+                    dest="checkpoint_path", default="./Checkpoint/LPBA40.pth")
 
 args = parse.parse_args()
 
